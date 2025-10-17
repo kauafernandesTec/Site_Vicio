@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  /* Removido padding-top para eliminar espaço entre menu e banner */
+}
+
+/* NAVBAR */
+.navbar {
+  background: linear-gradient(135deg, #2c3e87, #6b4c9a);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  transition: all 0.3s ease;
+  height: 80px;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.navbar .nav-link:hover {
+  color: #dcdcdc;
+}
+
+p {
+  padding-bottom: 10px;
+  letter-spacing: 0.5px;
+  font-family: "Barlow", sans-serif;
+}
+
+.navbar-toggler {
+  border: none;
+  background: transparent;
+}
+
+/* Adicionado estilo para o ícone do menu hambúrguer */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* BANNER */
+.banner-section {
+  background: linear-gradient(135deg, rgba(44, 62, 135, 0.7), rgba(107, 76, 154, 0.7)), url(img/download.jpg) center /
+    cover no-repeat;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 100px 20px;
+}
+
+.banner-section h1 {
+  font-family: "Surprisedmonkey", sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.banner-section .lead {
+  font-size: 1.5rem;
+}
+
+/* CARDS */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn-outline-dark:hover {
+  background-color: #2c3e87;
+  border-color: #2c3e87;
+  color: white;
+}
+
+
+.card-body img {
+   width: 130%;
+   height: 400px;
+   object-fit: cover;
+   object-position: center;
+}
+
+/* FOOTER */
+footer {
+  background: linear-gradient(135deg, #2c3e87, #6b4c9a);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .banner-section {
+    min-height: 400px;
+    padding: 80px 20px;
+  }
+  .banner-section h1 {
+    font-size: 2.5rem;
+  }
+  .banner-section .lead {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner-section {
+    min-height: 350px;
+    padding: 60px 15px;
+  }
+  .banner-section h1 {
+    font-size: 2rem;
+  }
+  .banner-section .lead {
+    font-size: 1rem;
+  }
+}
